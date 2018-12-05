@@ -28,6 +28,7 @@ public:
     clock_info GetInfo();
     Clock();
     Clock(tinyint day, tinyint hour, tinyint minute);
+    void SetTime(tinyint day, tinyint hour, tinyint minute);
     void MinuteTick();
     void Schedule(func_ptr, void*, tinyint, tinyint, tinyint);
 };
