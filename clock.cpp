@@ -24,6 +24,11 @@ void Clock::Schedule(func_ptr callback, void* args, tinyint d, tinyint h, tinyin
     this->_alarm_count ++;
   }
 }
+
+void Clock::SetTime(tinyint day, tinyint hour, tinyint minute){
+  this->_info = (clock_info){ day, hour, minute };
+}
+
 void Clock::MinuteTick(){
     int minute = (this->_info.minute+1);
     int of = minute / 60;
